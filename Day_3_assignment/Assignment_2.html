@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data types</title>
+    <h2>DATA TYPES</h2>
+</head>
+<body>
+    <h2>Question 3 :Brief intro of available data types in javascript</h2>
+<h3>Ans : </h3>
+<p>There are six basic data types in JavaScript which can be divided into three main categories: primitive (or primary), composite (or reference), and special data types. String, Number, and Boolean are primitive data types. Object, Array, and Function (which are all types of objects) are composite data types. Whereas Undefined and Null are special data types.
+
+    Primitive data types can hold only one value at a time, whereas composite data types can hold collections of values and more complex entities. Let's discuss each one of them in detail.</p>
+<h3>1.The String Data Type</h3>
+<p>The string data type is used to represent textual data (i.e. sequences of characters). Strings are created using single or double quotes surrounding one or more characters, as shown below:</p>
+<h4>Example</h4>
+<p>var a = 'Hi there!';  // using single quotes <br>
+    var b = "Hi there!";  // using double quotes</p>
+
+    <h3>2.The Number Data Type</h3>
+<p>The number data type is used to represent positive or negative numbers with or without decimal place, or numbers written using exponential notation e.g. 1.5e-4 (equivalent to 1.5x10-4).</p>
+<h4>Example</h4>
+<p>var a = 25;         // integer<br>
+    var b = 80.5;       // floating-point number<br>
+    var c = 4.25e+6;    // exponential notation, same as 4.25e6 or 4250000<br>
+    var d = 4.25e-6;    // exponential notation, same as 0.00000425</p>
+
+    <h3>3.The Boolean Data Type</h3>
+<p>The Boolean data type can hold only two values: true or false. It is typically used to store values like yes (true) or no (false), on (true) or off (false), etc. as demonstrated below:</p>
+<h4>Example</h4>
+<p>var isReading = true;   // yes, I'm reading<br>
+    var isSleeping = false; // no, I'm not sleeping</p>
+
+    <h3>4.The Undefined Data Type</h3>
+<p>The undefined data type can only have one value-the special value undefined. If a variable has been declared, but has not been assigned a value, has the value undefined.</p>
+<h4>Example</h4>
+<p>var a;<br>
+    var b = "Hello World!"<br>
+     
+    alert(a) // Output: undefined<br>
+    alert(b) // Output: Hello World!</p>
+
+    <h3>5.The Array Data Type</h3>
+    <p>An array is a type of object used for storing multiple values in single variable. Each value (also called an element) in an array has a numeric position, known as its index, and it may contain data of any data type-numbers, strings, booleans, functions, objects, and even other arrays. The array index starts from 0, so that the first array element is arr[0] not arr[1].
+
+        The simplest way to create an array is by specifying the array elements as a comma-separated list enclosed by square brackets, as shown in the example below:</p>
+    <h4>Example</h4>
+    <p>var colors = ["Red", "Yellow", "Green", "Orange"];<br>
+        var cities = ["London", "Paris", "New York"];<br>
+         
+        alert(colors[0]);   // Output: Red<br>
+        alert(cities[2]);   // Output: New York</p>
+
+        <h3>6.The Function Data Type</h3>
+        <p>The function is callable object that executes a block of code. Since functions are objects, so it is possible to assign them to variables, as shown in the example below:</p>
+        <h4>Example</h4>
+        <p>var greeting = function(){ <br>
+            return "Hello World!"; <br>
+        }<br>
+         
+        // Check the type of greeting variable<br>
+        alert(typeof greeting) // Output: function<br>
+        alert(greeting());     // Output: Hello World!</p>
+</body> 
+</html>
