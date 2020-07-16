@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASSIGNMENT 2</title>
+    <h2>STRING METHODS</h2>
+</head>
+<body>
+    <p>concat method is used to concat two strings</p>
+    <script>
+       var sent ="He is a good enough to serve others ";
+       sentcat = sent.concat("too");
+       document.write(sentcat);
+    </script>
+    <p>Replace method in string is used to replace  the given string with another string.Here good is replaced by best</p>
+    <script>
+        document.write("<br />");
+        var sent ="He is a good enough to serve others too";
+        document.write(sentcat);
+        document.write("<br />");
+        sentrep = sent.replace("good","best");
+        document.write(sentrep);
+     </script>
+     <p>Substring method is used to extract characters from a string.Here I extracted from 0 th index to 7th index</p>
+     <script>
+        document.write("<br />");
+        var sent ="He is a good enough to serve others too";
+        document.write(sent);
+        document.write("<br />");
+        sentsubstr = sent.substring(0,7);
+        document.write(sentsubstr);
+     </script>
+     <p>Trim method is used to remove unwanted white spaces from a string</p>
+     <script>
+        document.write("<br />");
+        var sent ="  he is      He is a good enough to serve others too   you    ";
+        document.write(sent);
+        document.write("<br />");
+        senttrim = sent.trim();
+        document.write(senttrim);
+     </script>
+     <p>Convert the string to uppercase letters</p>
+     <script>
+        document.write("<br />");
+        var sent ="He is a good enough to serve others too";
+        document.write(sent);
+        document.write("<br />");
+        sentup = sent.toLocaleUpperCase();
+        document.write(sentup);
+     </script>
+     <p>Convert the string to lowercase letters</p>
+     <script>
+        document.write("<br />");
+        var sent ="He is a good enough to serve others too";
+        document.write(sent);
+        document.write("<br />");
+        sentlow = sent.toLocaleLowerCase();
+        document.write(sentlow);
+     </script>
+     <h2>ARRAY METHODS</h2>
+     <p>splice method in array is used to remove elements without leaving "holes" in the array.Here I removed first element in array </p>
+     <script>
+          document.write("<br />");
+         var arr =['rio','tokyo','nairobi','helsinki','berlin','professor','oslo'];
+         document.write(arr);
+         spl = arr.splice(0,1);
+         document.write("<br />");
+         document.write(arr);
+     </script>     
+</body>
+</html>

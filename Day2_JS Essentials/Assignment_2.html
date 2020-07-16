@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASSIGNMENT 3</title>
+    <h2>Check USER INPUT AND GIVE OUTPUT</h2>
+</head>
+<body>
+    <script>
+        function validate(age){
+            var ans="not eligible";
+            if(age> 21){
+                ans="eligible";
+                console.log("Can Drink");
+            }
+            else {
+                console.log("Can't Drink");
+                return(ans);
+            }
+        }
+    </script>
+</head>
+<body>
+    <script>
+        var age=parseInt(prompt("Enter age"));
+        var status=validate(age);
+        // document.write("you are eligible for ")
+        // document.write("You are <b>"+status+"</b> for Drink");
+    </script>
+</body>
+</html>
