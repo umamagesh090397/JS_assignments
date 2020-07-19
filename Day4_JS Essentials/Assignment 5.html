@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 5</title>
+    <h2>Percentage Identification</h2>
+</head>
+<body>
+    <script>
+        let num = window.prompt("Enter the number");
+        if (num > 0 && num<= 5000) {
+            let per = (num/100)*2;
+             console.log(`The commission earned by him is ${per}`);
+        } else if (num > 5001 && num <= 10000) {
+            let per = (num/100)*5;
+             console.log(`The commission earned by him is ${per}`);
+        } else if(num > 10001 && num <= 20000) {
+            let per = (num/100)*7;
+             console.log(`The commission earned by him is ${per}`);
+        } else if(num > 20001){
+            let per = (num/100)*10;
+             console.log(`The commission earned by him is ${per}`);
+
+        }
+    </script>
+</body>
+</html>

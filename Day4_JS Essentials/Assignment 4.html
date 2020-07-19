@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> JavaScript Switch Case </title>
+</head>
+ <h1> JavaScript Switch Case </h1>
+<body>
+<script>
+
+    var opertor = window.prompt("Enter the operation to perform");
+    if (opertor =='+' || opertor=='-' || opertor =='*' || opertor =='/' || opertor == '%') {
+   var x = prompt("Enter a first number", "0"); 
+   var y = prompt("Enter a second number", "0"); 
+   var number1 = parseInt(x); 
+   var number2 = parseInt(y);
+    } else {
+        var number =window.prompt("enter the number");
+    }
+    switch (opertor)
+    {
+        case '+':
+            document.write("Addition of two numbers is: " + (number1 + number2));
+            break;
+        case '-':
+            document.write("Subtraction of two numbers is: " + (number1 - number2));
+            break;           
+        case '*':
+            document.write("Multiplication of two numbers is: " + (number1 * number2));
+            break;
+        case '/':
+            document.write("Division of two numbers is: " + (number1 / number2));
+            break;
+        case 'sqrt':
+            document.write("Square root of number is: " + (Math.sqrt(number)));
+            break;
+        case '%':
+        document.write("percentage of number is: " + ((number1/100)* number2));
+        break;
+        default:
+            document.write("<b> You have entered Wrong operator </b>");
+            document.write("<br \> Please enter Correct operator such as +, -, *, /, %,sqrt");
+    }
+</script>
+</body>
+</html>
