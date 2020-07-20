@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 8</title>
+    <h2>ARROW FUNCTION</h2>
+</head>
+<body>
+    <!-- <script>
+        function ask(question, yes , no) {
+            if(confirm(question)) yes()
+            else no();
+        }
+        ask(
+            "Do You Agree?",
+            function() {alert("You agreed."); },
+            function() {alert("You cancelled the execution.");}
+        )
+    </script> -->
+    <script>
+        let ask= (question, yes, no) => (confirm(question)) ? yes() : no()
+
+        ask(
+            "Do You Agree?",
+            function() {alert("You agreed."); },
+            function() {alert("You cancelled the execution.");}
+        )
+    </script>
+</body>
+</html>
