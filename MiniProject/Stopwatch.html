@@ -1,0 +1,121 @@
+<h1><time>00:00:00</time></h1>
+<button id="start">start</button>
+<button id="stop">stop</button>
+<button id="clear">clear</button>
+
+<div id="primaryContent" class="group">
+    <p>Input the time in minutes and click start</p>
+    <div id="inputArea"></div>
+    <h2 id="time">0:00</h2>
+</div> <!-- main content -->
+
+<script>
+    var h1 = document.getElementsByTagName('h1')[0],
+    start = document.getElementById('start'),
+    stop = document.getElementById('stop'),
+    clear = document.getElementById('clear'),
+    seconds = 0, minutes = 0, hours = 0,
+    t;
+
+function add() {
+    seconds++;
+    if (seconds >= 60) {
+        seconds = 0;
+        minutes++;
+        if (minutes >= 60) {
+            minutes = 0;
+            hours++;
+        }
+    }
+    
+    h1.textContent = (hours ? (hours > 9 ? hours : "0" + hours) : "00") + ":" + (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds);
+
+    timer();
+}
+function timer() {
+    t = setTimeout(add, 1000);
+}
+timer();
+
+
+/* Start button */
+start.onclick = timer;
+
+/* Stop button */
+stop.onclick = function() {
+    clearTimeout(t);
+}
+
+/* Clear button */
+clear.onclick = function() {
+    h1.textContent = "00:00:00";
+    seconds = 0; minutes = 0; hours = 0;
+}
+
+////////////////////second
+var mySeconds;
+var intervalHandle;
+
+function resetPage(){
+	document.getElementById("inputArea").style.display="none";	
+	
+	
+}
+function tick(){
+	var timeDisplay=document.getElementById("time");
+	
+	var min=Math.floor(mySeconds/60);
+	var sec=mySeconds-(min*60);
+	
+	if (sec < 10) {
+		sec="0"+sec;
+	}
+	
+	var message=min.toString()+":"+sec;
+	
+	timeDisplay.innerHTML=message;
+	
+	if(mySeconds===0){
+		alert("Done");
+		clearInterval(intervalHandle);
+		resetPage();
+	}
+	mySeconds--;
+	
+	
+}
+function startCounter(){
+	var myInput=document.getElementById("minutes").value;
+	if (isNaN(myInput)){
+		alert("Type a valid number please");
+		return;
+	}
+	mySeconds=myInput*60;
+	
+	intervalHandle=setInterval(tick, 1000);
+	
+	document.getElementById("inputArea").style.display="none";
+	
+	
+}
+
+
+window.onload=function(){
+	var myInput=document.createElement("input");
+	myInput.setAttribute("type","text");
+	myInput.setAttribute("id","minutes");
+	
+	var myButton=document.createElement("input");
+	myButton.setAttribute("type","button");
+	myButton.setAttribute("value","Start Timer");
+	
+	myButton.onclick=function(){
+		startCounter();	
+		
+	}
+	document.getElementById("inputArea").appendChild(myInput);
+	document.getElementById("inputArea").appendChild(myButton);
+	
+	
+}
+</script>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Quote Generator</title>
+</head>
+<body> 
+    <h1>Quote Generator</h1>
+    <div id="container">
+        <button id="btn">Click for a new Quote!</button>
+        <div id="output">Click the button to generate a Quote</div>
+    </div>
+    <script>
+        let btn = document.getElementById('btn');
+let output = document.getElementById('output');
+let quotes = [
+    '“Dont judge intelligence of fish by measuring his ability to climb tree.” – Albert Einstien',
+    '"The Pessimist Sees Difficulty In Every Opportunity. The Optimist Sees Opportunity In Every Difficulty.” – Winston Churchill', 
+    '“Don’t Let Yesterday Take Up Too Much Of Today.” – Will Rogers',
+    '“You Learn More From Failure Than From Success. Don’t Let It Stop You. Failure Builds Character.” – Unknown',
+    '“It’s Not Whether You Get Knocked Down, It’s Whether You Get Up.” – Inspirational Quote By Vince Lombardi',
+    '“If You Are Working On Something That You Really Care About, You Don’t Have To Be Pushed. The Vision Pulls You.” – Steve Jobs',
+    '“People Who Are Crazy Enough To Think They Can Change The World, Are The Ones Who Do.” – Rob Siltanen',
+    '“Failure Will Never Overtake Me If My Determination To Succeed Is Strong Enough.” – Og Mandino',
+    '“Entrepreneurs Are Great At Dealing With Uncertainty And Also Very Good At Minimizing Risk. That’s The Classic Entrepreneur.” – Mohnish Pabrai',
+];
+
+btn.addEventListener('click', function(){
+    var randomQuote = quotes[Math.floor(Math.random() * quotes.length)]
+    output.innerHTML = randomQuote;
+})
+    </script>
+</body>
+</html>
